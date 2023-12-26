@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> إدارة المنتجات  🏦</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800;900;1000&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tilt+Prism&family=Work+Sans:ital,wght@0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- start main content -->
+     <div class="main">
+         <h2> نظام إدارة المنتجات  🛒</h2>
+        <div class="container">
+        <form action="">
+            <input type="text" placeholder="أسم المنتج" id="title">
+            <div class="price">
+                <input onkeyup="getTotal()"  type="number" placeholder="السعر" id="Price">
+                <input onkeyup="getTotal()"  type="number" placeholder="الضرائب" id="Taxes">
+                <input onkeyup="getTotal()"  type="number" placeholder="الأعلانات" id="advertisements">
+                <input onkeyup="getTotal()"  type="number" placeholder="الخصم" id="discount">
+                <span  onkeyup="getTotal()" class="total" id="total">إجمالي: </span>
+            </div>
+            <input type="text" placeholder="الفئة" id="category">
+            <input type="number" placeholder="العدد" id="count">
+            <button id="Creat"> إنشاء</button>
+            <input type="search" onkeyup="searchData(this.value)" placeholder="بتبحث عن إيه" id="search">
+            <div class="searchbtn">
+                <button onclick="getSearchStatus(id, event)" id="searchTitle">إبحث عن طرق المنتج</button>
+                <button onclick="getSearchStatus(id , event)" id="SearchCategory">إبحث عن طرق الفئة</button>   
+            </div>
+            <div id="deletBTN">
+            </div>
+        </form>
+        </div>
+     </div>
+     <!-- end main content -->
+
+     <!-- start table -->
+     <div class="container">
+        <table>
+            <tr>
+               <th>ID</th>
+               <th>أسم المنتج</th>
+               <th>السعر</th>
+               <th>الضرائب</th>
+               <th>الأعلانات</th>
+               <th>الخصم</th>
+               <th>الفئة</th>
+               <th>العدد</th>
+               <th>الإجمالي</th>
+               <th>تحديث</th>
+               <th>حذف</th>
+            </tr>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+     </div>
+     <!-- end table -->
+     
+     <script src="main.js"></script>
+</body>
+</html>

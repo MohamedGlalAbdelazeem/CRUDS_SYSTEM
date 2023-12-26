@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    direction: rtl;
+     background-image: url(./imges/abstract-polygon-colorful-4k-wallpaper-scaled.jpg);
+     background-size: cover;
+     background-repeat: repeat;
+}
+
+.main h2{
+    color: white;
+    text-align: center;
+    margin: 1.2rem 0;
+    font-size: 30px;
+    border-radius: 500px 500px;
+    border-bottom: 1px solid wheat;
+}
+.container{
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+.container form input ,button{
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    background-color: rgba(204, 199, 199, 0.689);
+    color: black;
+    border-radius: 10px;
+    outline: none; 
+    transition:  0.8s ease;
+}
+.container form input::placeholder{
+   font-size: 25px;
+   color: black;
+   opacity: 0.7;
+}
+.container form input:focus{
+    border-top: none;
+    outline: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.408);  
+    transform: scale(1.1);
+}
+.container .price input{
+     width: 20%;
+    background-color: rgb(91, 87, 77);
+    color: white;
+}
+.container .price input::placeholder{
+   color: white;
+}
+
+.container .price .total{
+    max-width: 40px;
+    position: relative;
+    padding: 11px;
+    background-color: rgb(241, 87, 40);
+    color: black;
+    border-radius: 10px;
+    font-family: SANS-SERIF;
+    font-size: 18px;
+    padding-left: 0px;
+}
+button{
+    color: white;
+    background-color: black;
+    font-weight: 600;
+    box-shadow:  0 0 0.5rem rgba(255, 255, 255, 0.392);
+    border: 3px solid rgba(255, 255, 255, 0.533);
+}
+button:hover{
+    cursor: pointer;
+    opacity: 0.7; 
+}
+.searchbtn {
+   display: flex;
+   justify-content: center;
+}
+.searchbtn button{
+    width:40%;
+}
+@media (max-width:767px) {
+    .container .price input{
+         width: 100%;
+         margin-bottom: 0px;
+         text-align: center;
+         font-size: 14px;
+         font-weight: 800;
+    }
+    .container .price #discount{
+        width: 60%; 
+    }
+    .container .price .total{
+        max-width: 150px;
+        position: absolute;
+        padding: 11px;
+        background-color: #fc087b;
+        color: black;
+        border-radius: 10px;
+        font-family: SANS-SERIF;
+        font-size: 18px;
+        padding-left: 0px;
+        transform: translate(-4px, 12px);
+    }
+    .container {
+        padding-left:  0px;  
+        padding-right:  0px; 
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+    }
+    .searchbtn button{ 
+        width:40%;
+        font-weight: 900;
+        font-size: 12px;
+     }
+    #Creat ,#deletAll{
+        font-size: 12px;
+        font-weight: 800;
+    }
+    .main h2{
+        color: white;
+        font-size: 38px;
+        text-align: center;  
+    }
+    .container form input:focus{
+        transform: scale(1);
+    }
+}
+/*----------------End the header-----------------*/
+
+
+
+/*------------- start tabel---------------------  */
+table {
+    border: 2px solid white;
+    width: 100%;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 4px;
+    box-shadow:  0 0 0.5rem rgba(255, 255, 255, 0.371);
+    background-color: rgba(0, 0, 0, 0.68);
+    overflow-x: auto;
+    overflow: scroll;
+}
+  tr th {
+    border: 2px solid white;
+    padding: 4px;
+    border-top: none;
+    text-align: center;
+    background-color: black;
+    color:white;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+tbody tr td {
+    color: white;
+    text-align: center;
+    border-right: 2px solid white;
+}
+tbody tr td  button{
+      width: 70%;
+      font-size: 11px;
+      box-shadow:  0 0 0.5rem white;
+} 
+tbody tr td  button:hover{
+      box-shadow:  none;
+}
+@media (max-width:767px) {
+    table {
+        margin-bottom: 20px;
+        overflow-x: auto;
+        overflow: scroll;
+    }
+    tr th {
+        padding: 1px;
+        font-size: 8px;  
+    }
+    tbody tr td  button{
+        width: 60%;
+        padding: 4px;
+        font-size: 7px;
+     }
+    tbody tr td {
+        font-size: 10px;
+    }
+}
+/*------------ end tabel ------- */
